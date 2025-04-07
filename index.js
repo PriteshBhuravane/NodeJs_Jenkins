@@ -1,7 +1,8 @@
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-  res.end('Hello from Jenkins Node.js App!');
+  res.end('Hello World from JEnkins App...Automatically trigger the pipeline whenever changes are pushed to the GitHub
+repository.!');
 });
 
 server.listen(3000, () => {
