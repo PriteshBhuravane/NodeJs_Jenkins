@@ -1,9 +1,11 @@
-const http = require('http');
+const express = require('express');
+const app = express();
+const PORT = 3000;
 
-const server = http.createServer((req, res) => {
-  res.end('Hello World from JEnkins App...After a Pushed!');
+app.get('/', (req, res) => {
+  res.send("Hello World from JEnkins App...After a Pushed!");
 });
 
-server.listen(3000, () => {
-  console.log('Server running at http://localhost:3000');
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
